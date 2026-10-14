@@ -26,7 +26,7 @@ Pour créer une propriété de formule :
 4. Tapez votre formule dans le champ **Formule**.
 5. Fermez la boîte de dialogue.
 
-L'éditeur de formule proposera la complétion automatique des noms de [[Fonctions|fonctions]] et de propriétés au fur et à mesure que vous tapez pour valider la syntaxe de votre formule. Une coche verte apparaît lorsque votre formule est valide.
+L'éditeur de formule proposera la complétion automatique des noms de [[Fonctions|fonctions]] et des propriétés au fur et à mesure que vous tapez pour valider la syntaxe de votre formule. Une coche verte apparaît lorsque votre formule est valide.
 
 Une fois créée, vous pouvez utiliser une propriété de formule comme n'importe quelle autre propriété dans votre base. Ajoutez-la aux [[Vues|vues]], utilisez-la dans les filtres, triez par celle-ci, et bien plus encore.
 
@@ -39,14 +39,14 @@ Dans l'éditeur de formule, tapez une expression utilisant des propriétés, des
 Vous pouvez référencer différents types de propriétés dans vos formules :
 
 - **Propriétés de note** — Propriétés issues des [[Propriétés|métadonnées]] d'une note.
-- **Propriétés de fichier** — Propriétés intégrées comme `file.name`, `file.size` ou `file.mtime`.
-- **Propriétés de formule** — Autres formules via `formula.nom_de_la_formule`.
+- **Propriétés de fichier** — Propriétés intégrées telles que `file.name`, `file.size` ou `file.mtime`.
+- **Propriétés de formule** — Autres formules en utilisant leur nom, p.ex. `formula.nom_de_la_formule`.
 
 **Exemples :**
 
-- `price * quantity` — multiplier deux propriétés de note
-- `file.name + " - " + description` — combiner le nom de fichier avec une propriété de note
-- `formula.price_per_unit * 1.1` — utiliser une autre propriété de formule
+- `price * quantity` — multiplier deux propriétés d'une note
+- `file.name + " - " + description` — combiner le nom de fichier avec une propriété de la note
+- `formula.price_per_unit * 1.1` — utiliser une autre propriété de la formule
 
 ### Utiliser des opérateurs
 
@@ -56,7 +56,7 @@ Les **opérateurs arithmétiques** effectuent des calculs sur des nombres :
 - `price - discount` — soustraction
 - `price * quantity` — multiplication
 - `price / quantity` — division
-- `(part / whole) * 100` — utiliser des parenthèses pour l'ordre des opérations
+- `(part / whole) * 100` — utiliser des parenthèses pour spécifier l'ordre des opérations
 
 Les **opérateurs de comparaison** comparent des valeurs :
 
@@ -90,7 +90,7 @@ Les fonctions effectuent des opérations sur des valeurs. Les fonctions disponib
 
 - `if(price, "$" + price.toFixed(2), "")` pour définir une condition avec un formatage numérique.
 - `file.name.lower()` pour convertir en minuscules.
-- `tags.contains("urgent")` pour vérifier si la liste de mots-clés contient une valeur.
+- `tags.contains("urgent")` pour vérifier si la liste de mots-clés contient une valeur spécifique.
 - `due_date.format("YYYY-MM-DD")` pour formater une date.
 
 ## Exemples de formules
